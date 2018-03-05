@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="Guru99.Guru99.Guru">
+        <methods>
+          <include name="AfterTest"/>
+          <include name="Browserloading"/>
+          <include name="VerifyMobileSorting"/>
+        </methods>
+      </class> <!-- Guru99.Guru99.Guru -->
+      <class name="Guru99.Guru99.Productlisting_details">
+        <methods>
+          <include name="mobile"/>
+          <include name="Browserload"/>
+        </methods>
+      </class> <!-- Guru99.Guru99.Productlisting_details -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
