@@ -19,23 +19,18 @@ Step 6. Verify all products are sorted by name
 
 package Guru99.Guru99;
 
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import PageObject.Locators;
 import Utility.Browser;
-import Utility.ConfigReader;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class Guru {
 
-WebDriver driver;
+	private static WebDriver driver;
 
 
 @BeforeTest
@@ -43,14 +38,7 @@ WebDriver driver;
 	public void Browserloading()
 	{
 	
-	ConfigReader config = new  ConfigReader();
-	 System.setProperty("webdriver.chrome.driver", config.getChromePath());
-	 driver = new ChromeDriver();
-	 String baseurl = config.getApplicationURL();
-	 driver.get(baseurl);
-	 driver.manage().window().maximize();
-   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	 //System.out.println("Brower Start");
+	 driver = Browser.GetBrowser();
 	
 	}
 	

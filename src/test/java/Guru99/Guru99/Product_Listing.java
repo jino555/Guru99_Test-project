@@ -17,8 +17,8 @@ public class Product_Listing {
   public void beforeTest() {
 	  
 	  
-	  Browser load = new Browser(driver);
-	  load.GetBrowser();
+	  Browser load = new Browser();
+	  driver = load.GetBrowser();
   }
   
   
@@ -27,8 +27,7 @@ public class Product_Listing {
   public void f() {
 	  
 	  {
-			Locators sorting = new Locators(driver);
-			sorting.MobileSorting();
+		
 			
 		}
 	  
