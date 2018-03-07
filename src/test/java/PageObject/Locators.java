@@ -20,12 +20,13 @@ public class Locators {
 
 	
 	
-	//Mobile Menu
+	//Locators
 	
  By mobile =  By.xpath("//a[contains(.,'Mobile')]");
 By sort = By.cssSelector("select[title=\"Sort By\"]");
-	
-	
+By xperiaprice = By.xpath("//span[@class='price']");
+By xperia =By.xpath("//a[@title='Sony Xperia']");
+By detailprice =By.xpath("//*[@class='price']");
 	
 	public Locators (WebDriver driver)
 	{
@@ -34,7 +35,7 @@ By sort = By.cssSelector("select[title=\"Sort By\"]");
 	
 	
 	
-	
+	//Test Case1
 	public   void MobileSorting()
 	{
          //Actual result
@@ -59,7 +60,32 @@ By sort = By.cssSelector("select[title=\"Sort By\"]");
 	
 	
 	
+	//TestCase 2
 	
+	public void Productlistingpage() {
+		
+		
+		driver.findElement(mobile).click();
+		String Xperia_price= driver.findElement(xperiaprice).getText();
+		System.out.println("xperia mobile price in listing page is  " +Xperia_price);
+		driver.findElement(xperia).click();
+		String  Xperia_detailprice = driver.findElement(detailprice).getText();
+		System.out.println("xperia mobile detail price is " +Xperia_detailprice);
+		try {
+			Assert.assertEquals(Xperia_price, Xperia_detailprice);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		System.out.println("Sony Xperia Listing and Productdetail price is correct");
+		
+		
+		
+	
+			
+		
+		
+	}
 	
 	
 	

@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44860" started-at="2018-03-06T11:09:17Z" finished-at="2018-03-06T11:10:02Z">
+  <suite name="Default suite" duration-ms="23685" started-at="2018-03-07T08:50:32Z" finished-at="2018-03-07T08:50:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44860" started-at="2018-03-06T11:09:17Z" finished-at="2018-03-06T11:10:02Z">
-      <class name="Guru99.Guru99.Guru">
-        <test-method status="PASS" signature="Browserloading()[pri:0, instance:Guru99.Guru99.Guru@57baeedf]" name="Browserloading" is-config="true" duration-ms="31147" started-at="2018-03-06T16:39:17Z" finished-at="2018-03-06T16:39:48Z">
+    <test name="Default test" duration-ms="23685" started-at="2018-03-07T08:50:32Z" finished-at="2018-03-07T08:50:56Z">
+      <class name="Guru99.Guru99.Product_Listing">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Product_Listing@57baeedf]" name="beforeTest" is-config="true" duration-ms="15181" started-at="2018-03-07T14:20:32Z" finished-at="2018-03-07T14:20:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Browserloading -->
-        <test-method status="PASS" signature="VerifyMobileSorting()[pri:0, instance:Guru99.Guru99.Guru@57baeedf]" name="VerifyMobileSorting" duration-ms="12330" started-at="2018-03-06T16:39:48Z" description="This TestCase is to verify Sorting in Mobile menu" finished-at="2018-03-06T16:40:00Z">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyProductListing()[pri:0, instance:Guru99.Guru99.Product_Listing@57baeedf]" name="VerifyProductListing" duration-ms="8475" started-at="2018-03-07T14:20:48Z" description="This Test Case is to Verify compare Mobile price" finished-at="2018-03-07T14:20:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyMobileSorting -->
-        <test-method status="PASS" signature="AfterTest()[pri:0, instance:Guru99.Guru99.Guru@57baeedf]" name="AfterTest" is-config="true" duration-ms="1352" started-at="2018-03-06T16:40:00Z" finished-at="2018-03-06T16:40:02Z">
+        </test-method> <!-- VerifyProductListing -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Product_Listing@57baeedf]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-07T14:20:56Z" finished-at="2018-03-07T14:20:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterTest -->
-      </class> <!-- Guru99.Guru99.Guru -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- Guru99.Guru99.Product_Listing -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
