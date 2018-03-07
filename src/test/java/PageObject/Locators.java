@@ -6,6 +6,8 @@
 	 
 	package PageObject;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -21,12 +23,21 @@ public class Locators {
 	
 	
 	//Locators
-	
+ 
+//Test Case 1
  By mobile =  By.xpath("//a[contains(.,'Mobile')]");
 By sort = By.cssSelector("select[title=\"Sort By\"]");
+
+//TestCase2
 By xperiaprice = By.xpath("//span[@class='price']");
 By xperia =By.xpath("//a[@title='Sony Xperia']");
 By detailprice =By.xpath("//*[@class='price']");
+
+//TestCase3
+By cart = By.xpath("//*[@type='button']");
+By quantity =By.xpath("//*[@type='submit']");
+
+
 	
 	public Locators (WebDriver driver)
 	{
@@ -79,14 +90,29 @@ By detailprice =By.xpath("//*[@class='price']");
 		}
 		System.out.println("Sony Xperia Listing and Productdetail price is correct");
 		
-		
-		
-	
-			
-		
-		
 	}
+		
+	//TestCase 3
+		
+		public void Cartpage() {
+		driver.findElement(mobile).click();
+		driver.findElement(cart).click();
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			driver.findElement(quantity).clear();
+			driver.findElement(quantity).sendKeys("1000");
+		
+		}
+		
+		}
+		
+		
 	
 	
 	
-}
+	
+

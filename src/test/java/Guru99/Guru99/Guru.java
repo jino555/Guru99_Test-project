@@ -46,7 +46,6 @@ public class Guru {
 @Test(priority=0,description="This TestCase is to verify Sorting in Mobile menu")
 
 
-	
 public void VerifyMobileSorting()
 {
 	Locators sorting = new Locators(driver);
