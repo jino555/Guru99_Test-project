@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33136" started-at="2018-03-13T11:07:37Z" finished-at="2018-03-13T11:08:10Z">
+  <suite name="Default suite" duration-ms="20057" started-at="2018-03-13T15:54:47Z" finished-at="2018-03-13T15:55:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33136" started-at="2018-03-13T11:07:37Z" finished-at="2018-03-13T11:08:10Z">
+    <test name="Default test" duration-ms="20057" started-at="2018-03-13T15:54:47Z" finished-at="2018-03-13T15:55:07Z">
       <class name="Guru99.Guru99.Cart">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="beforeTest" is-config="true" duration-ms="18819" started-at="2018-03-13T16:37:37Z" finished-at="2018-03-13T16:37:56Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="beforeTest" is-config="true" duration-ms="9701" started-at="2018-03-13T21:24:47Z" finished-at="2018-03-13T21:24:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifyCartPage()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="VerifyCartPage" duration-ms="14297" started-at="2018-03-13T16:37:56Z" description="This  Test Case is to verify Cart Page" finished-at="2018-03-13T16:38:10Z">
+        <test-method status="PASS" signature="VerifyCartPage()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="VerifyCartPage" duration-ms="10305" started-at="2018-03-13T21:24:57Z" description="This  Test Case is to verify Cart Page" finished-at="2018-03-13T21:25:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyCartPage -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-03-13T16:38:10Z" finished-at="2018-03-13T16:38:10Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-13T21:25:07Z" finished-at="2018-03-13T21:25:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
