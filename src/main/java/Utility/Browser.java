@@ -12,10 +12,13 @@ public class Browser {
 	  public static WebDriver GetBrowser() {
 	  	if (driver != null) return driver;
 	          else {
-	              System.setProperty("webdriver.chrome.driver",  "E:\\chromedriver.exe");
+	        	  
+	        	  ConfigReader config = new ConfigReader();
+	        	  
+	              System.setProperty("webdriver.chrome.driver",config.getChromePath());
 
 	              driver = new ChromeDriver();
-	              String baseurl = "https:\\live.guru99.com\\index.php\\";
+	              String baseurl = config.getApplicationURL();
 	              driver.get(baseurl);
 	              driver.manage().window().maximize();
 	              driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

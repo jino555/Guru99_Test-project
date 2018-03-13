@@ -43,12 +43,12 @@ public class ConfigReader {
 		
 		//Access to Application url
 		
-public String getApplicationURL()
+       public String getApplicationURL()
 
-{
+      {
 	
 	return   pro.getProperty("url");
-}
+      }
 
 
 		

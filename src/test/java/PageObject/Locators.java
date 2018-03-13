@@ -117,7 +117,7 @@ By emptycart = By.xpath("//*[@class ='page-title']");
 	    driver.findElement(quantity).sendKeys("1000");
 	    driver.findElement(update).click();
 	    String actual_msg = driver.findElement(msg).getText();
-	    System.out.println("Error message is " +actual_msg);
+	    System.out.println("Actual Error message is " +actual_msg);
 	    String expected_msg = "The maximum quantity allowed for purchase is 500.";
 	     Assert.assertEquals(actual_msg, expected_msg);
 	    System.out.println("Error mesage is verified");
