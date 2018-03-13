@@ -13,6 +13,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
+
 import Utility.Screenshot;
 
 
@@ -22,7 +24,7 @@ public class Locators {
 
 	
 	
-	//Locators
+//Locators
  
 //Test Case 1
  By mobile =  By.xpath("//a[contains(.,'Mobile')]");
@@ -35,7 +37,18 @@ By detailprice =By.xpath("//*[@class='price']");
 
 //TestCase3
 By cart = By.xpath("//*[@type='button']");
-By quantity =By.xpath("//*[@type='submit']");
+By edit = By.xpath("(//a[contains(text(),'Edit')])[3]");
+By quantity =By.name("qty");
+By update = By.xpath("//button[@type='button']");
+By empty = By.xpath("//*[@id='empty_cart_button']");
+By emptycart = By.xpath("//*[@class ='page-title']");
+
+
+
+
+
+
+
 
 
 	
@@ -83,6 +96,7 @@ By quantity =By.xpath("//*[@type='submit']");
 		String  Xperia_detailprice = driver.findElement(detailprice).getText();
 		System.out.println("xperia mobile detail price is " +Xperia_detailprice);
 		try {
+			
 			Assert.assertEquals(Xperia_price, Xperia_detailprice);
 		} catch (Exception e) {
 			
@@ -94,19 +108,23 @@ By quantity =By.xpath("//*[@type='submit']");
 		
 	//TestCase 3
 		
-		public void Cartpage() {
+		public void Cartpage() 
+		{
 		driver.findElement(mobile).click();
 		driver.findElement(cart).click();
-		try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-			driver.findElement(quantity).clear();
-			driver.findElement(quantity).sendKeys("1000");
+	    driver.findElement(edit).click();
+	    driver.findElement(quantity).sendKeys("1000");
+	    driver.findElement(update).click();
+	    Assert.assertTrue(driver.getPageSource().contains("The maximum quantity allowed for purchase is 500."),"Error message not verified");
+	    System.out.println("Error mesage is verified");
+	    driver.findElement(empty).click();
+	    Assert.assertTrue(driver.findElement(emptycart).isDisplayed(),"Cart is not empty");
+	    System.out.println("Cart is empty");
+	    
+	    
+			
+			}
 		
-		}
 		
 		}
 		

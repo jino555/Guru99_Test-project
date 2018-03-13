@@ -21,7 +21,7 @@ public class Cart {
   }
   
   @Test(description="This  Test Case is to verify Cart Page")
-  public void VerifyCartPage() {
+  public void VerifyCartPage()  {
 	  
 	  Locators cart = new Locators(driver);
 	  cart.Cartpage();
