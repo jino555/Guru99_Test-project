@@ -1,67 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="34431" started-at="2018-03-14T10:24:00Z" finished-at="2018-03-14T10:24:34Z">
+  <suite name="Default suite" duration-ms="20045" started-at="2018-03-14T15:14:51Z" finished-at="2018-03-14T15:15:11Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="34431" started-at="2018-03-14T10:24:00Z" finished-at="2018-03-14T10:24:34Z">
-      <class name="Guru99.Guru99.Guru">
-        <test-method status="PASS" signature="VerifyMobileSorting()[pri:0, instance:Guru99.Guru99.Guru@5442a311]" name="VerifyMobileSorting" duration-ms="6254" started-at="2018-03-14T15:54:15Z" description="This TestCase is to verify Sorting in Mobile menu" finished-at="2018-03-14T15:54:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyMobileSorting -->
-      </class> <!-- Guru99.Guru99.Guru -->
-      <class name="Guru99.Guru99.Product_Listing">
-        <test-method status="PASS" signature="VerifyProductListing()[pri:1, instance:Guru99.Guru99.Product_Listing@1a968a59]" name="VerifyProductListing" duration-ms="2985" started-at="2018-03-14T15:54:22Z" description="This Test Case is to Verify compare Mobile price" finished-at="2018-03-14T15:54:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyProductListing -->
-      </class> <!-- Guru99.Guru99.Product_Listing -->
-      <class name="Guru99.Guru99.Cart">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Cart@548e7350]" name="beforeTest" is-config="true" duration-ms="15578" started-at="2018-03-14T15:54:00Z" finished-at="2018-03-14T15:54:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="Browserloading()[pri:0, instance:Guru99.Guru99.Guru@5442a311]" name="Browserloading" is-config="true" duration-ms="1" started-at="2018-03-14T15:54:15Z" finished-at="2018-03-14T15:54:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Browserloading -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Product_Listing@1a968a59]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-03-14T15:54:15Z" finished-at="2018-03-14T15:54:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.HandlingPop@4667ae56]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-03-14T15:54:15Z" finished-at="2018-03-14T15:54:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifyCartPage()[pri:2, instance:Guru99.Guru99.Cart@548e7350]" name="VerifyCartPage" duration-ms="6195" started-at="2018-03-14T15:54:25Z" description="This  Test Case is to verify Cart Page" finished-at="2018-03-14T15:54:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyCartPage -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Cart@548e7350]" name="afterTest" is-config="true" duration-ms="901" started-at="2018-03-14T15:54:33Z" finished-at="2018-03-14T15:54:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Product_Listing@1a968a59]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-14T15:54:34Z" finished-at="2018-03-14T15:54:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="AfterTest()[pri:0, instance:Guru99.Guru99.Guru@5442a311]" name="AfterTest" is-config="true" duration-ms="0" started-at="2018-03-14T15:54:34Z" finished-at="2018-03-14T15:54:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.HandlingPop@4667ae56]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-14T15:54:34Z" finished-at="2018-03-14T15:54:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- Guru99.Guru99.Cart -->
+    <test name="Default test" duration-ms="20045" started-at="2018-03-14T15:14:51Z" finished-at="2018-03-14T15:15:11Z">
       <class name="Guru99.Guru99.HandlingPop">
-        <test-method status="PASS" signature="VerifyCompare()[pri:3, instance:Guru99.Guru99.HandlingPop@4667ae56]" name="VerifyCompare" duration-ms="2480" started-at="2018-03-14T15:54:31Z" description="This Test Case is to Verify Comparing of two products" finished-at="2018-03-14T15:54:33Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.HandlingPop@57baeedf]" name="beforeTest" is-config="true" duration-ms="15673" started-at="2018-03-14T20:44:51Z" finished-at="2018-03-14T20:45:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyCompare()[pri:3, instance:Guru99.Guru99.HandlingPop@57baeedf]" name="VerifyCompare" duration-ms="4343" started-at="2018-03-14T20:45:07Z" description="This Test Case is to Verify Comparing of two products" finished-at="2018-03-14T20:45:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyCompare -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.HandlingPop@57baeedf]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-03-14T20:45:11Z" finished-at="2018-03-14T20:45:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- Guru99.Guru99.HandlingPop -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

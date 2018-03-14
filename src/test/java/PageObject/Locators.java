@@ -49,6 +49,8 @@ By emptycart = By.xpath("//*[@class ='page-title']");
 By compare1 = By.xpath("(//a[contains(text(),'Add to Compare')])[2]");
 By compare2 =By.xpath("(//a[contains(text(),'Add to Compare')])[3]");
 By compare = By.xpath("//*[@title='Compare']");
+By iphone = By.xpath("//a[contains(text(),'IPhone')]");
+By samsung =By.xpath("//a[contains(text(),'Samsung Galaxy')]");
 
 
 
@@ -145,8 +147,18 @@ By compare = By.xpath("//*[@title='Compare']");
 			
 		driver.findElement(mobile).click();
 		driver.findElement(compare1).click();
+		String Iphone = driver.findElement(iphone).getText();
+		System.out.println("Iphone name is" +Iphone);
 		driver.findElement(compare2).click();
+		String Samsung = driver.findElement(samsung).getText();
+		System.out.println("Samsung Price is " +Samsung);
 		driver.findElement(compare).click();
+		
+		//Switch to new Window
+		 for (String handle : driver.getWindowHandles()) {
+		    	driver.switchTo().window(handle);
+		    	}
+		
 		
 		}
 		
