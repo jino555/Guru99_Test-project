@@ -1,30 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12529" started-at="2018-03-13T16:13:07Z" finished-at="2018-03-13T16:13:20Z">
+  <suite name="Suite" duration-ms="50188" started-at="2018-03-14T06:36:06Z" finished-at="2018-03-14T06:36:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12529" started-at="2018-03-13T16:13:07Z" finished-at="2018-03-13T16:13:20Z">
+    <test name="Test" duration-ms="50188" started-at="2018-03-14T06:36:06Z" finished-at="2018-03-14T06:36:56Z">
+      <class name="Guru99.Guru99.Guru">
+        <test-method status="PASS" signature="VerifyMobileSorting()[pri:0, instance:Guru99.Guru99.Guru@53b32d7]" name="VerifyMobileSorting" duration-ms="9112" started-at="2018-03-14T12:06:28Z" description="This TestCase is to verify Sorting in Mobile menu" finished-at="2018-03-14T12:06:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyMobileSorting -->
+      </class> <!-- Guru99.Guru99.Guru -->
+      <class name="Guru99.Guru99.Product_Listing">
+        <test-method status="PASS" signature="VerifyProductListing()[pri:2, instance:Guru99.Guru99.Product_Listing@5442a311]" name="VerifyProductListing" duration-ms="3188" started-at="2018-03-14T12:06:52Z" description="This Test Case is to Verify compare Mobile price" finished-at="2018-03-14T12:06:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyProductListing -->
+      </class> <!-- Guru99.Guru99.Product_Listing -->
       <class name="Guru99.Guru99.Cart">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="beforeTest" is-config="true" duration-ms="8944" started-at="2018-03-13T21:43:07Z" finished-at="2018-03-13T21:43:16Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Cart@548e7350]" name="beforeTest" is-config="true" duration-ms="22309" started-at="2018-03-14T12:06:06Z" finished-at="2018-03-14T12:06:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="VerifyCartPage()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="VerifyCartPage" duration-ms="3531" started-at="2018-03-13T21:43:16Z" description="This  Test Case is to verify Cart Page" finished-at="2018-03-13T21:43:20Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerExceptionat PageObject.Locators.Cartpage(Locators.java:114)at Guru99.Guru99.Cart.VerifyCartPage(Cart.java:27)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="Browserloading()[pri:0, instance:Guru99.Guru99.Guru@53b32d7]" name="Browserloading" is-config="true" duration-ms="0" started-at="2018-03-14T12:06:28Z" finished-at="2018-03-14T12:06:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browserloading -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Product_Listing@5442a311]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-03-14T12:06:28Z" finished-at="2018-03-14T12:06:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyCartPage()[pri:1, instance:Guru99.Guru99.Cart@548e7350]" name="VerifyCartPage" duration-ms="14828" started-at="2018-03-14T12:06:38Z" description="This  Test Case is to verify Cart Page" finished-at="2018-03-14T12:06:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyCartPage -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Cart@57baeedf]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-13T21:43:20Z" finished-at="2018-03-13T21:43:20Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Cart@548e7350]" name="afterTest" is-config="true" duration-ms="729" started-at="2018-03-14T12:06:56Z" finished-at="2018-03-14T12:06:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="AfterTest()[pri:0, instance:Guru99.Guru99.Guru@53b32d7]" name="AfterTest" is-config="true" duration-ms="1" started-at="2018-03-14T12:06:56Z" finished-at="2018-03-14T12:06:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Product_Listing@5442a311]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-14T12:06:56Z" finished-at="2018-03-14T12:06:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- Guru99.Guru99.Cart -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

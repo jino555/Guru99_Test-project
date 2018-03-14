@@ -20,7 +20,7 @@ public class Cart {
 	  
   }
   
-  @Test(description="This  Test Case is to verify Cart Page")
+  @Test(priority=2,description="This  Test Case is to verify Cart Page")
   public void VerifyCartPage()  {
 	  
 	  Locators cart = new Locators(driver);
@@ -31,6 +31,8 @@ public class Cart {
 
   @AfterTest
   public void afterTest() {
+	  System.out.println("Browser End");
+	  driver.quit();
   }
 
 }

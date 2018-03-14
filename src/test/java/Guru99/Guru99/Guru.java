@@ -57,7 +57,7 @@ public void VerifyMobileSorting()
 
 
 
-@AfterTest
+@AfterTest()
 
  public void AfterTest()
 {

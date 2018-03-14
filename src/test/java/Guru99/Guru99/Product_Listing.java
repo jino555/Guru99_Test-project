@@ -34,7 +34,7 @@ public class Product_Listing {
 			  }
   
   
- 	  @Test(description ="This Test Case is to Verify compare Mobile price")
+ 	  @Test(priority=2,description ="This Test Case is to Verify compare Mobile price")
 
 
 			
@@ -49,7 +49,10 @@ public class Product_Listing {
   
 
   @AfterTest
-  public void afterTest() {
+  public void afterTest() {    
+	  
+	  System.out.println("Browser End");
+	  driver.quit();
   }
 
 }

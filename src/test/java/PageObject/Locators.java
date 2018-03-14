@@ -28,10 +28,11 @@ public class Locators {
  
 //Test Case 1
  By mobile =  By.xpath("//a[contains(.,'Mobile')]");
-By sort = By.cssSelector("select[title=\"Sort By\"]");
+By sortname = By.cssSelector("select[title=\"Sort By\"]");
 
 //TestCase2
-By xperiaprice = By.xpath("//span[@class='price']");
+By sortposition =By.xpath("//*[@title='Sort By']");
+By xperiaprice = By.id("product-price-1");
 By xperia =By.xpath("//a[@title='Sony Xperia']");
 By detailprice =By.xpath("//*[@class='price']");
 
@@ -66,20 +67,22 @@ By emptycart = By.xpath("//*[@class ='page-title']");
          //Actual result
 		
 	    String actual_title = driver.getTitle();
-		System.out.println("Title is" +actual_title);
+		System.out.println(" Actual Title is" +actual_title);
 		
 		//Expected Result
 		
 		String expected_title= "Home page";
+		System.out.println("Expected Result is" +expected_title);
        Assert.assertEquals(expected_title, actual_title, "Title is invalid");
 	     System.out.println("Page Title is verified");
 		driver.findElement(mobile).click();
 		String title = driver.getTitle();
 		Assert.assertTrue(title.contains("Mobile")," Mobile page is not Verified");
 		System.out.println("Mobile page is Verified");
-		new Select(driver.findElement(sort)).selectByVisibleText("Name");
+		new Select(driver.findElement(sortname)).selectByVisibleText("Name");
 		Screenshot.CaptureScreenshot(driver, "Mobile");
 		System.out.println("Screenshot captured");
+		
 	
 	}
 	
@@ -89,7 +92,7 @@ By emptycart = By.xpath("//*[@class ='page-title']");
 	
 	public void Productlistingpage() {
 		
-		
+	
 		driver.findElement(mobile).click();
 		String Xperia_price= driver.findElement(xperiaprice).getText();
 		System.out.println("xperia mobile price in listing page is  " +Xperia_price);
@@ -102,6 +105,7 @@ By emptycart = By.xpath("//*[@class ='page-title']");
 		} catch (Exception e) {
 			
 			e.printStackTrace();
+			System.out.println("messge is" +e);
 		}
 		System.out.println("Sony Xperia Listing and Productdetail price is correct");
 		
@@ -119,7 +123,8 @@ By emptycart = By.xpath("//*[@class ='page-title']");
 	    String actual_msg = driver.findElement(msg).getText();
 	    System.out.println("Actual Error message is " +actual_msg);
 	    String expected_msg = "The maximum quantity allowed for purchase is 500.";
-	     Assert.assertEquals(actual_msg, expected_msg);
+	    System.out.println("Expected  message is" +expected_msg);
+	    Assert.assertEquals(actual_msg, expected_msg);
 	    System.out.println("Error mesage is verified");
 	    driver.findElement(empty).click();
 	    Assert.assertTrue(driver.findElement(emptycart).isDisplayed(),"Cart is not empty");

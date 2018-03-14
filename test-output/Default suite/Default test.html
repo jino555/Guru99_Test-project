@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 13 21:43:07 IST 2018</td>
+<td>Started on:</td><td>Wed Mar 14 10:03:25 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12529 ms)</td>
+<tr><td>Total time:</td><td>27 seconds (27730 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,10 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Guru99.Guru99.Cart.VerifyCartPage()'><b>VerifyCartPage</b><br>Test class: Guru99.Guru99.Cart<br>Test method: This  Test Case is to verify Cart Page</td>
-<td><div><pre>java.lang.NullPointerException
-	at PageObject.Locators.Cartpage(Locators.java:114)
-	at Guru99.Guru99.Cart.VerifyCartPage(Cart.java:27)
+<td title='Guru99.Guru99.Product_Listing.VerifyProductListing()'><b>VerifyProductListing</b><br>Test class: Guru99.Guru99.Product_Listing<br>Test method: This Test Case is to Verify compare Mobile price</td>
+<td><div><pre>java.lang.AssertionError: expected [$100.00] but found [$500.00]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at PageObject.Locators.Productlistingpage(Locators.java:104)
+	at Guru99.Guru99.Product_Listing.VerifyProductListing(Product_Listing.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -104,10 +110,16 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace566113173", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace566113173'><pre>java.lang.NullPointerException
-	at PageObject.Locators.Cartpage(Locators.java:114)
-	at Guru99.Guru99.Cart.VerifyCartPage(Cart.java:27)
+</pre></div><a href='#' onClick='toggleBox("stack-trace672746064", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace672746064'><pre>java.lang.AssertionError: expected [$100.00] but found [$500.00]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at PageObject.Locators.Productlistingpage(Locators.java:104)
+	at Guru99.Guru99.Product_Listing.VerifyProductListing(Product_Listing.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -134,8 +146,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>Guru99.Guru99.Cart@57baeedf</td></tr>
+<td>10</td>
+<td>Guru99.Guru99.Product_Listing@57baeedf</td></tr>
 </table><p>
 </body>
 </html>
