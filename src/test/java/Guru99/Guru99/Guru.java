@@ -19,6 +19,7 @@ Step 6. Verify all products are sorted by name
 
 package Guru99.Guru99;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

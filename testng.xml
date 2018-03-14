@@ -3,11 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-    
-    <class name=  "Guru99.Guru99.Guru"/>
-     <class name= "Guru99.Guru99.Product_Listing"/>
-    <class name = "Guru99.Guru99.Cart"/>
-      
+      <class name="Guru99.Guru99.Guru"/>
+      <class name="Guru99.Guru99.Cart"/>
+      <class name="Guru99.Guru99.Product_Listing"/>
+      <class name="Guru99.Guru99.HandlingPop"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

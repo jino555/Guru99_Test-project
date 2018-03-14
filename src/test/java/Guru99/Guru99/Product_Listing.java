@@ -14,6 +14,7 @@ Test Steps:
 package Guru99.Guru99;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import PageObject.Locators;
 import Utility.Browser;
@@ -34,7 +35,7 @@ public class Product_Listing {
 			  }
   
   
- 	  @Test(priority=2,description ="This Test Case is to Verify compare Mobile price")
+ 	  @Test(priority=1,description ="This Test Case is to Verify compare Mobile price")
 
 
 			

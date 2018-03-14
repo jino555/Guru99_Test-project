@@ -45,6 +45,11 @@ By msg =   By.xpath("//*[@class='error-msg']");
 By empty = By.xpath("//*[@id='empty_cart_button']");
 By emptycart = By.xpath("//*[@class ='page-title']");
 
+//TestCase4
+By compare1 = By.xpath("(//a[contains(text(),'Add to Compare')])[2]");
+By compare2 =By.xpath("(//a[contains(text(),'Add to Compare')])[3]");
+By compare = By.xpath("//*[@title='Compare']");
+
 
 
 
@@ -130,9 +135,20 @@ By emptycart = By.xpath("//*[@class ='page-title']");
 	    Assert.assertTrue(driver.findElement(emptycart).isDisplayed(),"Cart is not empty");
 	    System.out.println("Cart is empty");
 	    
-	    
+	    }
+		
+		
+		//TestCase 4
+		
+		public void Compareproducts() {
 			
-			}
+			
+		driver.findElement(mobile).click();
+		driver.findElement(compare1).click();
+		driver.findElement(compare2).click();
+		driver.findElement(compare).click();
+		
+		}
 		
 		
 		}
