@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30432" started-at="2018-03-15T09:33:50Z" finished-at="2018-03-15T09:34:20Z">
+  <suite name="Default suite" duration-ms="14587" started-at="2018-03-15T16:38:13Z" finished-at="2018-03-15T16:38:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30432" started-at="2018-03-15T09:33:50Z" finished-at="2018-03-15T09:34:20Z">
-      <class name="Guru99.Guru99.HandlingPop">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.HandlingPop@57baeedf]" name="beforeTest" is-config="true" duration-ms="20426" started-at="2018-03-15T15:03:50Z" finished-at="2018-03-15T15:04:10Z">
+    <test name="Default test" duration-ms="14587" started-at="2018-03-15T16:38:13Z" finished-at="2018-03-15T16:38:28Z">
+      <class name="Guru99.Guru99.Account_Creation">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="beforeTest" is-config="true" duration-ms="11010" started-at="2018-03-15T22:08:13Z" finished-at="2018-03-15T22:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifyCompare()[pri:3, instance:Guru99.Guru99.HandlingPop@57baeedf]" name="VerifyCompare" duration-ms="9986" started-at="2018-03-15T15:04:10Z" description="This Test Case is to Verify Comparing of two products" finished-at="2018-03-15T15:04:20Z">
+        <test-method status="PASS" signature="VerifyAccount()[pri:4, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="VerifyAccount" duration-ms="3548" started-at="2018-03-15T22:08:24Z" description="This Testcase is to verify Account Creation" finished-at="2018-03-15T22:08:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyCompare -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.HandlingPop@57baeedf]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-15T15:04:20Z" finished-at="2018-03-15T15:04:20Z">
+        </test-method> <!-- VerifyAccount -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-15T22:08:28Z" finished-at="2018-03-15T22:08:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- Guru99.Guru99.HandlingPop -->
+      </class> <!-- Guru99.Guru99.Account_Creation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

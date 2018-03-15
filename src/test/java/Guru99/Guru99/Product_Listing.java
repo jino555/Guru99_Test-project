@@ -35,7 +35,7 @@ public class Product_Listing {
 			  }
   
   
- 	  @Test(priority=1,description ="This Test Case is to Verify compare Mobile price")
+ 	  @Test(priority=2,description ="This Test Case is to Verify compare Mobile price")
 
 
 			

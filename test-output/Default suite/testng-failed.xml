@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Guru99.Guru99.HandlingPop">
+      <class name="Guru99.Guru99.Account_Creation">
         <methods>
           <include name="afterTest"/>
-          <include name="VerifyCompare"/>
+          <include name="VerifyAccount"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- Guru99.Guru99.HandlingPop -->
+      </class> <!-- Guru99.Guru99.Account_Creation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

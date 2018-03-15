@@ -1,7 +1,6 @@
 package Guru99.Guru99;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
 import PageObject.Locators;
 import Utility.Browser;
@@ -10,30 +9,29 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 
-public class Cart {
-  
+public class Account_Creation {
+ 
 	WebDriver driver;
 	
   @BeforeTest
   public void beforeTest() {
-	  
-	  driver= Browser.GetBrowser();
-	  
+	  driver = Browser.GetBrowser();
   }
-  
-  @Test(priority=1,description="This  Test Case is to verify Cart Page")
-  public void VerifyCartPage()  {
-	  
-	  Locators cart = new Locators(driver);
-	  cart.Cartpage();
-  }
-  
-  
 
+  
+  @Test(priority=4,description="This Testcase is to verify Account Creation")
+  public void VerifyAccount() {
+	  
+	  Locators account = new Locators(driver);
+       account.AccountCreation();
+	  
+  
+  }
+  
+  
+  
   @AfterTest
   public void afterTest() {
-	  System.out.println("Browser End");
-	  driver.quit();
   }
 
 }

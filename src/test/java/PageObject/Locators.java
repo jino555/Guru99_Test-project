@@ -34,6 +34,7 @@ By sortname = By.cssSelector("select[title=\"Sort By\"]");
 By sortposition =By.xpath("//*[@title='Sort By']");
 By xperiaprice = By.id("product-price-1");
 By xperia =By.xpath("//a[@title='Sony Xperia']");
+By xperiatitle =By.xpath("//span[@class='h1']");
 By detailprice =By.xpath("//*[@class='price']");
 
 //TestCase3
@@ -56,7 +57,10 @@ By iphonepopup = By.xpath("//a[contains(text(),'IPhone')]");
 By samsungpopup = By.xpath("//a[contains(text(),'Samsung Galaxy')]");
 By popupclose = By.xpath("//button[@class='button']");
 
+//TestCase 5
 
+By account = By.xpath("//div[2]/div/a/span[2]");
+By myaccount = By.xpath("//*[@title='My Account']");
 
 
 
@@ -106,6 +110,8 @@ By popupclose = By.xpath("//button[@class='button']");
 		String Xperia_price= driver.findElement(xperiaprice).getText();
 		System.out.println("xperia mobile price in listing page is  " +Xperia_price);
 		driver.findElement(xperia).click();
+		String xperianame  = driver.findElement(xperiatitle).getText();
+		System.out.println("Detail page is of " +xperianame);
 		String  Xperia_detailprice = driver.findElement(detailprice).getText();
 		System.out.println("xperia mobile detail price is " +Xperia_detailprice);
 		try {
@@ -144,14 +150,15 @@ By popupclose = By.xpath("//button[@class='button']");
 		
 		//TestCase 4
 		
-		public void Compareproducts() {
+		
+		public void Compareproducts() throws Exception {
 			
-			
+	
 		driver.findElement(mobile).click();
+		new Select(driver.findElement(sortname)).selectByVisibleText("Position");
+		Thread.sleep(2000);
 		driver.findElement(compare1).click();
-		
-		driver.findElement(compare2).click();
-		
+	    driver.findElement(compare2).click();
 		driver.findElement(compare).click();
 		
 		//Switch to new Window
@@ -170,9 +177,9 @@ By popupclose = By.xpath("//button[@class='button']");
 		 System.out.println("Pop up is Verified");
 		 
 		 //Verify the correct products are  added in Compare List
-		 
+		
 		 String Iphone_list = driver.findElement(iphonelist).getText();
-		 System.out.println("Iphone name in listing  is" +Iphone_list);  
+		 System.out.println("Iphone name in listing  is " +Iphone_list);  
 		 String iphone_popup  = driver.findElement(iphonepopup).getText();
 		 System.out.println("Iphone name in popup is " +iphone_popup );
 		 String Samsung_list  = driver.findElement(samsunglist).getText();
@@ -187,6 +194,23 @@ By popupclose = By.xpath("//button[@class='button']");
 		}
 		
 		
+	//TestCase 5
+		
+		public void AccountCreation() {
+			
+			driver.findElement(account).click();
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			driver.findElement(myaccount).click();
+
+
+
+			
+		}
 		}
 		
 		

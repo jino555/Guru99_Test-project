@@ -25,7 +25,7 @@ public class HandlingPop {
 	 
   @Test(priority=3, description = "This Test Case is to Verify Comparing of two products")
   
-  public void VerifyCompare (){
+  public void VerifyCompare () throws Exception{
 	  
 	  Locators compare = new Locators(driver);
 	  compare.Compareproducts();

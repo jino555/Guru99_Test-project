@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="Guru99.Guru99.Cart">
+      <class name="Guru99.Guru99.HandlingPop">
         <methods>
           <include name="afterTest"/>
-          <include name="VerifyCartPage"/>
+          <include name="VerifyCompare"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- Guru99.Guru99.Cart -->
+      </class> <!-- Guru99.Guru99.HandlingPop -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
