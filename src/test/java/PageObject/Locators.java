@@ -49,10 +49,12 @@ By emptycart = By.xpath("//*[@class ='page-title']");
 By compare1 = By.xpath("(//a[contains(text(),'Add to Compare')])[2]");
 By compare2 =By.xpath("(//a[contains(text(),'Add to Compare')])[3]");
 By compare = By.xpath("//*[@title='Compare']");
-By iphone = By.xpath("//a[contains(text(),'IPhone')]");
-By samsung =By.xpath("//a[contains(text(),'Samsung Galaxy')]");
-
-
+By iphonelist = By.xpath("//a[contains(text(),'IPhone')]");
+By samsunglist = By.xpath("//a[contains(text(),'Samsung Galaxy')]");
+By popup = By.xpath("//h1[contains(.,'Compare Products')]");
+By iphonepopup = By.xpath("//a[contains(text(),'IPhone')]");
+By samsungpopup = By.xpath("//a[contains(text(),'Samsung Galaxy')]");
+By popupclose = By.xpath("//button[@class='button']");
 
 
 
@@ -147,19 +149,41 @@ By samsung =By.xpath("//a[contains(text(),'Samsung Galaxy')]");
 			
 		driver.findElement(mobile).click();
 		driver.findElement(compare1).click();
-		String Iphone = driver.findElement(iphone).getText();
-		System.out.println("Iphone name is" +Iphone);
+		
 		driver.findElement(compare2).click();
-		String Samsung = driver.findElement(samsung).getText();
-		System.out.println("Samsung Price is " +Samsung);
+		
 		driver.findElement(compare).click();
 		
 		//Switch to new Window
 		 for (String handle : driver.getWindowHandles()) {
 		    	driver.switchTo().window(handle);
 		    	}
+		 
 		
-		
+		 //Verify pop up Title
+		 
+		 String expected_popuptext = "COMPARE PRODUCTS";
+		 System.out.println("Expected Pop up title is " +expected_popuptext);
+		 String actual_popuptext = driver.findElement(popup).getText();
+		 System.out.println("Actual Pop up title is "  +actual_popuptext);
+		 Assert.assertEquals(actual_popuptext, expected_popuptext);
+		 System.out.println("Pop up is Verified");
+		 
+		 //Verify the correct products are  added in Compare List
+		 
+		 String Iphone_list = driver.findElement(iphonelist).getText();
+		 System.out.println("Iphone name in listing  is" +Iphone_list);  
+		 String iphone_popup  = driver.findElement(iphonepopup).getText();
+		 System.out.println("Iphone name in popup is " +iphone_popup );
+		 String Samsung_list  = driver.findElement(samsunglist).getText();
+		 System.out.println("Samsung name in listing  is " +Samsung_list);
+		 String samsung_popup = driver.findElement(samsungpopup).getText();
+		 System.out.println(" Samung name in pop up is " +samsung_popup);
+		 Assert.assertEquals(iphone_popup, Iphone_list);
+		 Assert.assertEquals(samsung_popup, Samsung_list);
+		 System.out.println("Products are added in Comparison list and Verified ");
+		 driver.findElement(popupclose).click();
+		 
 		}
 		
 		
