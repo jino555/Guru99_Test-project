@@ -2,6 +2,7 @@ package Guru99.Guru99;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import PageObject.Locators;
 import Utility.Browser;
@@ -26,6 +27,7 @@ public class Cart {
 	  
 	  Locators cart = new Locators(driver);
 	  cart.Cartpage();
+	 
   }
   
   

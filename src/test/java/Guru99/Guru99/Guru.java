@@ -20,6 +20,7 @@ Step 6. Verify all products are sorted by name
 package Guru99.Guru99;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -51,6 +52,8 @@ public void VerifyMobileSorting()
 {
 	Locators sorting = new Locators(driver);
 	sorting.MobileSorting();
+	System.out.println("Browser End1");
+	driver.close();
 	
 }
 
@@ -62,7 +65,7 @@ public void VerifyMobileSorting()
 
  public void AfterTest()
 {
-   System.out.println("Browser End");
-	driver.quit();
+   //System.out.println("Browser End1");
+	//driver.quit();
 }
 }

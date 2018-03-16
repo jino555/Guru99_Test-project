@@ -79,6 +79,8 @@ By share_submit =By.xpath("//*[@id=\"form-validate\"]/div[2]/button/span/span");
 By share_msg = By.xpath("//*[@class='messages']");
 
 
+//Test Case 6
+
 	
 	public Locators (WebDriver driver)
 	{
@@ -88,6 +90,8 @@ By share_msg = By.xpath("//*[@class='messages']");
 	
 	
 	//Test Case1
+	
+	
 	public   void MobileSorting()
 	{
          //Actual result
