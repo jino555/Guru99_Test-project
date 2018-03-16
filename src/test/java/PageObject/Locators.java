@@ -9,6 +9,7 @@
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -59,11 +60,23 @@ By popupclose = By.xpath("//button[@class='button']");
 
 //TestCase 5
 
+
 By account = By.xpath("//div[2]/div/a/span[2]");
 By myaccount = By.xpath("//*[@title='My Account']");
-
-
-
+By createaccount =By.xpath("//*[@title='Create an Account']");
+By firstname = By.id("firstname");
+By secondname =By.id("lastname");
+By email =By.id("email_address");
+By password =By.id("password");
+By confirm_password=By.id("confirmation");
+By register =By.xpath("//*[@id=\"form-validate\"]/div[2]/button/span/span");
+By success_msg =By.xpath("//*[@class='success-msg']");
+By tv = By.linkText("TV");
+By wishlist = By.xpath("//*[@class='link-wishlist']");
+By share =By.name("save_and_share");
+By share_email =By.name("emails");
+By share_submit =By.xpath("//*[@id=\"form-validate\"]/div[2]/button/span/span");
+By share_msg = By.xpath("//*[@class='messages']");
 
 
 	
@@ -86,7 +99,7 @@ By myaccount = By.xpath("//*[@title='My Account']");
 		
 		String expected_title= "Home page";
 		System.out.println("Expected Result is" +expected_title);
-       Assert.assertEquals(expected_title, actual_title, "Title is invalid");
+        Assert.assertEquals(expected_title, actual_title, "Title is invalid");
 	     System.out.println("Page Title is verified");
 		driver.findElement(mobile).click();
 		String title = driver.getTitle();
@@ -196,7 +209,7 @@ By myaccount = By.xpath("//*[@title='My Account']");
 		
 	//TestCase 5
 		
-		public void AccountCreation() {
+		public void AccountCreation() throws Exception {
 			
 			driver.findElement(account).click();
 			try {
@@ -206,8 +219,40 @@ By myaccount = By.xpath("//*[@title='My Account']");
 				e.printStackTrace();
 			}
 			driver.findElement(myaccount).click();
-
-
+			driver.findElement(createaccount).click();
+			driver.findElement(firstname).sendKeys("Jino");
+			driver.findElement(secondname).sendKeys("Philip");
+			driver.findElement(email).sendKeys("teste672@gmail.com");
+			driver.findElement(password).sendKeys("9745754904");
+			driver.findElement(confirm_password).sendKeys("9745754904");
+			Thread.sleep(3000);
+			driver.findElement(register).click();
+			
+			//Verify Registration is success
+			
+			String expected_regmsg = "Thank you for registering with Main Website Store.";
+			System.out.println("Expected Registration message is " +expected_regmsg);
+			String actual_regmsg = driver.findElement(success_msg).getText();
+			System.out.println("Actual Registration message is " +actual_regmsg);
+		    Assert.assertEquals(actual_regmsg, expected_regmsg);
+			System.out.println("Registration message is verfied and Account created sucessfully");
+		 
+			driver.findElement(tv).click();
+			driver.findElement(wishlist).click();
+            driver.findElement(share).click();
+            driver.findElement(share_email).sendKeys("yadu@gmail.com,hari@gmail.com");
+            driver.findElement(share_submit).click();
+			
+            //Verify Wishlist is shared
+            
+            String expected_wishlistmsg = "Your Wishlist has been shared.";
+            System.out.println(" Expected Sharelist message is " +expected_wishlistmsg);
+            String actual_wishlistmsg = driver.findElement(share_msg).getText();
+            System.out.println("Actual Sharelist message is " +actual_wishlistmsg);
+            Assert.assertEquals(actual_wishlistmsg, expected_wishlistmsg);
+            System.out.println("Sharelist message is Verfied and Product is shared ");
+            
+            
 
 			
 		}

@@ -20,10 +20,10 @@ public class Account_Creation {
 
   
   @Test(priority=4,description="This Testcase is to verify Account Creation")
-  public void VerifyAccount() {
+  public void VerifyAccount() throws Exception {
 	  
 	  Locators account = new Locators(driver);
-       account.AccountCreation();
+      account.AccountCreation();
 	  
   
   }

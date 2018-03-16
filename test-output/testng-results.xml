@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14587" started-at="2018-03-15T16:38:13Z" finished-at="2018-03-15T16:38:28Z">
+  <suite name="Default suite" duration-ms="42963" started-at="2018-03-16T09:11:09Z" finished-at="2018-03-16T09:11:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14587" started-at="2018-03-15T16:38:13Z" finished-at="2018-03-15T16:38:28Z">
+    <test name="Default test" duration-ms="42963" started-at="2018-03-16T09:11:09Z" finished-at="2018-03-16T09:11:52Z">
       <class name="Guru99.Guru99.Account_Creation">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="beforeTest" is-config="true" duration-ms="11010" started-at="2018-03-15T22:08:13Z" finished-at="2018-03-15T22:08:24Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="beforeTest" is-config="true" duration-ms="26161" started-at="2018-03-16T14:41:09Z" finished-at="2018-03-16T14:41:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifyAccount()[pri:4, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="VerifyAccount" duration-ms="3548" started-at="2018-03-15T22:08:24Z" description="This Testcase is to verify Account Creation" finished-at="2018-03-15T22:08:28Z">
+        <test-method status="PASS" signature="VerifyAccount()[pri:4, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="VerifyAccount" duration-ms="16777" started-at="2018-03-16T14:41:35Z" description="This Testcase is to verify Account Creation" finished-at="2018-03-16T14:41:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyAccount -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-15T22:08:28Z" finished-at="2018-03-15T22:08:28Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Guru99.Guru99.Account_Creation@57baeedf]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-03-16T14:41:52Z" finished-at="2018-03-16T14:41:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
