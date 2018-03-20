@@ -32,10 +32,10 @@ public class Cart {
   
   
 
-  @AfterTest
+/*@AfterTest
   public void afterTest() {
-	  System.out.println("Browser End");
+	  System.out.println("Browser End1");
 	  driver.quit();
-  }
+  }*/
 
 }

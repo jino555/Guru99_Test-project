@@ -52,11 +52,9 @@ public void VerifyMobileSorting()
 {
 	Locators sorting = new Locators(driver);
 	sorting.MobileSorting();
-	System.out.println("Browser End1");
-	driver.close();
+
 	
 }
-
 
 
 
@@ -65,7 +63,7 @@ public void VerifyMobileSorting()
 
  public void AfterTest()
 {
-   //System.out.println("Browser End1");
-	//driver.quit();
+   System.out.println("Browser End");
+	driver.quit();
 }
 }

@@ -24,7 +24,7 @@ public class Account_Creation {
   public void VerifyAccount() throws Exception {
 	  
 	  Locators account = new Locators(driver);
-      account.AccountCreation();
+      account.Purchaseproducts();
 	  
   
   }

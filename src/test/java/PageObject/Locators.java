@@ -79,7 +79,29 @@ By share_submit =By.xpath("//*[@id=\"form-validate\"]/div[2]/button/span/span");
 By share_msg = By.xpath("//*[@class='messages']");
 
 
+
 //Test Case 6
+
+By login = By.xpath("//a[@title='Log In']");
+By login_email = By.id("email");
+By login_pw = By.id("pass");
+By submit =By.name("send");
+By mywishlist =By.xpath("//strong[contains(.,'My Wishlist')]");
+By addcart = By.xpath("//*[@class='button btn-cart']");
+By checkout =By.xpath("//*[@title='Proceed to Checkout']");
+By state =By.id("region_id");
+By zip = By.id("postcode");
+By estimate =By.xpath("(//button[@type='button'])[4]");
+By estimate_price =By.xpath("//*[@id=\"co-shipping-method-form\"]/dl/dd/ul/li/label/span");
+By update_shipping =By.name("do");
+By shippingcity = By.id("shipping:city");
+By shippingfax =By.id("shipping:fax");
+By continue_shipping = By.xpath("//*[@type='button']");
+By continue_shipping2 =By.xpath("button validation-passed");
+By moneyorder =By.name("payment[method]");
+By continue_shipping3 =By.xpath("(//button[@type='button'])[4]");
+
+
 
 	
 	public Locators (WebDriver driver)
@@ -260,6 +282,48 @@ By share_msg = By.xpath("//*[@class='messages']");
 
 			
 		}
+		
+		//Test case 6
+		
+		public void Purchaseproducts() throws Exception
+		{
+			
+			
+		driver.findElement(account).click();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		driver.findElement(login).click();
+	
+		driver.findElement(login_email).sendKeys("jinophilip555@gmail.com");
+		driver.findElement(login_pw).sendKeys("9745754904");
+		driver.findElement(submit).click();
+		driver.findElement(tv).click();
+		driver.findElement(wishlist).click();
+		driver.findElement(addcart).click();
+		//driver.findElement(checkout).click();
+		new Select(driver.findElement(state)).selectByVisibleText("New York");
+		
+		driver.findElement(zip).sendKeys("542986");
+		driver.findElement(estimate).click();
+		String estimated_cost = driver.findElement(estimate_price).getText();
+       System.out.println("Estimated Cost is " +estimated_cost);
+		driver.findElement(update_shipping).click();
+		driver.findElement(checkout).click();
+		driver.findElement(continue_shipping).click();
+		Thread.sleep(3000);
+		driver.findElement(shippingcity).sendKeys("Miami");
+	//	driver.findElement(shippingfax).sendKeys("7654654");
+		Thread.sleep(1000);
+		driver.findElement(continue_shipping2).click();
+		driver.findElement(continue_shipping2).click();
+		driver.findElement(moneyorder).click();
+		driver.findElement(continue_shipping3).click();	
+		
+		}
+		
 		}
 		
 		

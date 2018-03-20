@@ -2,6 +2,7 @@ package Guru99.Guru99;
 
 import org.testng.annotations.Test;
 
+import PageObject.Locators;
 import Utility.Browser;
 
 import org.testng.annotations.BeforeTest;
@@ -23,7 +24,11 @@ public class Product_order {
   
   
   @Test
-  public void VerifyProductOrder() {
+  public void VerifyProductOrder() throws Exception {
+	  
+	  Locators account = new Locators(driver);
+		account.AccountCreation();
+	  
   }
   
   
