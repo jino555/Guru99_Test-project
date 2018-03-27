@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
-
+import org.openqa.selenium.NoSuchElementException;
 import Utility.Screenshot;
 
 
@@ -83,7 +83,7 @@ By share_msg = By.xpath("//*[@class='messages']");
 //Test Case 6
 
 By login = By.xpath("//a[@title='Log In']");
-By login_email = By.id("email");
+By login_email = By.xpath("//*[@type='email']");
 By login_pw = By.id("pass");
 By submit =By.name("send");
 By mywishlist =By.xpath("//strong[contains(.,'My Wishlist')]");
@@ -96,14 +96,20 @@ By estimate_price =By.xpath("//*[@id=\"co-shipping-method-form\"]/dl/dd/ul/li/la
 By update_shipping =By.name("do");
 By shippingcity = By.id("shipping:city");
 By shippingfax =By.id("shipping:fax");
-By continue_shipping = By.xpath("//*[@type='button']");
-By continue_shipping2 =By.xpath("button validation-passed");
-By moneyorder =By.name("payment[method]");
-By continue_shipping3 =By.xpath("(//button[@type='button'])[4]");
+By continue_shipping = By.xpath("//*[@class='button']");
+By continue_shipping2 =By.xpath("//*[@type='button']");
+By moneyorder =By.id("p_method_checkmo");
+By continue_shipping3 =By.xpath("//div[contains(@id,'shipping-method-buttons-container')]");
 
 
+	//Test Case 7
 
-	
+By my_orders =By.xpath("//a[contains(.,'My Orders')]");
+By view_orders =By.xpath("//a[contains(.,'View Order')]");
+By order_no = By.xpath("//h1[contains(.,'Order #100006433 - Pending')]");
+By printorder = By.xpath("//a[contains(.,'Print Order')]");
+
+
 	public Locators (WebDriver driver)
 	{
 		this.driver= driver;
@@ -312,17 +318,48 @@ By continue_shipping3 =By.xpath("(//button[@type='button'])[4]");
        System.out.println("Estimated Cost is " +estimated_cost);
 		driver.findElement(update_shipping).click();
 		driver.findElement(checkout).click();
+		Thread.sleep(3000);
 		driver.findElement(continue_shipping).click();
 		Thread.sleep(3000);
-		driver.findElement(shippingcity).sendKeys("Miami");
-	//	driver.findElement(shippingfax).sendKeys("7654654");
-		Thread.sleep(1000);
-		driver.findElement(continue_shipping2).click();
 		driver.findElement(continue_shipping2).click();
 		driver.findElement(moneyorder).click();
-		driver.findElement(continue_shipping3).click();	
+		
+			
 		
 		}
+		
+		
+		//Test case 7
+		
+	    public void orderPdf() {
+		
+		driver.findElement(account).click();
+		driver.findElement(myaccount).click();
+		driver.findElement(login_email).sendKeys("jinophilip555@gmail.com");
+		driver.findElement(login_pw).sendKeys("9745754904");
+		driver.findElement(submit).click();
+		driver.findElement(my_orders).click();
+		driver.findElement(view_orders).click();
+		
+		//Verify previous order is displayed
+		
+		String expected_order = "ORDER #100006433 - PENDING";
+		String actual_order = driver.findElement(order_no).getText();
+		System.out.println("Order Number and Order status is " +actual_order );
+		Assert.assertEquals(actual_order, expected_order);
+		System.out.println(" Previous Order is displayed" );
+		driver.findElement(printorder).click();
+		
+		
+		
+		
+	}
+
+
+
+		
+		
+		
 		
 		}
 		

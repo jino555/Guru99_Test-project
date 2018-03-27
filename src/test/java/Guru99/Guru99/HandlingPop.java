@@ -24,7 +24,7 @@ public class HandlingPop {
 	 
 	 
 	 
-  @Test(priority=3, description = "This Test Case is to Verify Comparing of two products")
+  @Test( priority=3,description = "This Test Case is to Verify Comparing of two products")
   
   public void VerifyCompare () throws Exception{
 	  
