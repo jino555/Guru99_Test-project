@@ -14,6 +14,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import com.relevantcodes.extentreports.ExtentReports;
+
+import com.relevantcodes.extentreports.LogStatus;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
 import org.openqa.selenium.NoSuchElementException;
 import Utility.Screenshot;
@@ -115,7 +118,7 @@ By printorder = By.xpath("//a[contains(.,'Print Order')]");
 		this.driver= driver;
 	}
 	
-	
+	 
 	
 	//Test Case1
 	
@@ -150,11 +153,17 @@ By printorder = By.xpath("//a[contains(.,'Print Order')]");
 	
 	public void Productlistingpage() {
 		
+		ExtentReports logger = ExtentReports.get(Locators.class);
+		logger.init("E:\\Jino_testing\\Automation_project\\Guru99\\Extent reports\\report.html", true);
+		logger.startTest("VerifyProductListing");
 	
 		driver.findElement(mobile).click();
 		String Xperia_price= driver.findElement(xperiaprice).getText();
+		logger.log(LogStatus.INFO, "xperia price ");
 		System.out.println("xperia mobile price in listing page is  " +Xperia_price);
+		
 		driver.findElement(xperia).click();
+		
 		String xperianame  = driver.findElement(xperiatitle).getText();
 		System.out.println("Detail page is of " +xperianame);
 		String  Xperia_detailprice = driver.findElement(detailprice).getText();
@@ -162,12 +171,16 @@ By printorder = By.xpath("//a[contains(.,'Print Order')]");
 		try {
 			
 			Assert.assertEquals(Xperia_price, Xperia_detailprice);
+			logger.log(LogStatus.PASS, "Assertion passed");
+			logger.attachScreenshot("E:\\Jino_testing\\Automation_project\\Guru99\\Screenshots\\screenshot.png");
 		} catch (Exception e) {
 			
 			e.printStackTrace();
 			System.out.println("messge is" +e);
 		}
 		System.out.println("Sony Xperia Listing and Productdetail price is correct");
+		
+		logger.endTest();
 		
 	}
 		
@@ -309,13 +322,11 @@ By printorder = By.xpath("//a[contains(.,'Print Order')]");
 		driver.findElement(tv).click();
 		driver.findElement(wishlist).click();
 		driver.findElement(addcart).click();
-		//driver.findElement(checkout).click();
 		new Select(driver.findElement(state)).selectByVisibleText("New York");
-		
-		driver.findElement(zip).sendKeys("542986");
+	    driver.findElement(zip).sendKeys("542986");
 		driver.findElement(estimate).click();
 		String estimated_cost = driver.findElement(estimate_price).getText();
-       System.out.println("Estimated Cost is " +estimated_cost);
+        System.out.println("Estimated Cost is " +estimated_cost);
 		driver.findElement(update_shipping).click();
 		driver.findElement(checkout).click();
 		Thread.sleep(3000);

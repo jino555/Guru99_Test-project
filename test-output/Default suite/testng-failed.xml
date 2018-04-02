@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Guru99.Guru99.Account_Creation">
+      <class name="Guru99.Guru99.Product_Listing">
         <methods>
-          <include name="afterTest"/>
-          <include name="VerifyAccount"/>
           <include name="beforeTest"/>
+          <include name="VerifyProductListing"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- Guru99.Guru99.Account_Creation -->
+      </class> <!-- Guru99.Guru99.Product_Listing -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -36,12 +36,13 @@ public class Product_Listing {
 			  }
   
   
- 	  @Test(priority=2,description ="This Test Case is to Verify compare Mobile price")
+ 	  @Test(priority=0,description ="This Test Case is to Verify compare Mobile price")
 
 
 			
 			public void VerifyProductListing()
 			{
+ 		  
 				Locators price = new Locators(driver);
 				price.Productlistingpage();
 			}
