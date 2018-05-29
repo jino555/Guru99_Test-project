@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Guru_Banking]">
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="functionaltest"/>
+        <include name="smoketest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Guru99.Guru99.Account_Creation">
+        <methods>
+          <include name="VerifyAccount"/>
+        </methods>
+      </class> <!-- Guru99.Guru99.Account_Creation -->
+      <class name="Guru99.Guru99.PDF_orders">
+        <methods>
+          <include name="VerifyOrderasPDF"/>
+        </methods>
+      </class> <!-- Guru99.Guru99.PDF_orders -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Guru_Banking] -->

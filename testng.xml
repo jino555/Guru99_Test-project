@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Guru_Banking">
   <test thread-count="5" name="Test">
-    <classes>
+  
+  <groups>
+  
+  <run>
+  <include name ="functionaltest"/>
+  <include name="smoketest"/>
+ 
+  </run>
+  
+  </groups>
+  
+   <classes>
       <class name="Guru99.Guru99.Guru"/>
       <class name="Guru99.Guru99.PDF_orders"/>
       <class name="Guru99.Guru99.Cart"/>
@@ -12,5 +23,12 @@
       <class name="Guru99.Guru99.Product_Listing"/>
       <class name="Guru99.Guru99.HandlingPop"/>
     </classes>
+    
+  
+   
+    
+    
+    
+    
   </test> <!-- Test -->
 </suite> <!-- Suite -->

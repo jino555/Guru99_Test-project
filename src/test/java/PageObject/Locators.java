@@ -6,19 +6,19 @@
 	 
 	package PageObject;
 
-import java.util.concurrent.TimeUnit;
+//import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import com.relevantcodes.extentreports.ExtentReports;
+//import com.relevantcodes.extentreports.ExtentReports;
 
-import com.relevantcodes.extentreports.LogStatus;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
-import org.openqa.selenium.NoSuchElementException;
+//import com.relevantcodes.extentreports.LogStatus;
+///import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Text;
+//import org.openqa.selenium.NoSuchElementException;
 import Utility.Screenshot;
 
 
@@ -153,13 +153,13 @@ By printorder = By.xpath("//a[contains(.,'Print Order')]");
 	
 	public void Productlistingpage() {
 		
-		ExtentReports logger = ExtentReports.get(Locators.class);
-		logger.init("E:\\Jino_testing\\Automation_project\\Guru99\\Extent reports\\report.html", true);
-		logger.startTest("VerifyProductListing");
+		//ExtentReports logger = ExtentReports.get(Locators.class);
+		//logger.init("E:\\Jino_testing\\Automation_project\\Guru99\\Extent reports\\report.html", true);
+		//logger.startTest("VerifyProductListing");
 	
 		driver.findElement(mobile).click();
 		String Xperia_price= driver.findElement(xperiaprice).getText();
-		logger.log(LogStatus.INFO, "xperia price ");
+		//logger.log(LogStatus.INFO, "xperia price ");
 		System.out.println("xperia mobile price in listing page is  " +Xperia_price);
 		
 		driver.findElement(xperia).click();
@@ -171,8 +171,8 @@ By printorder = By.xpath("//a[contains(.,'Print Order')]");
 		try {
 			
 			Assert.assertEquals(Xperia_price, Xperia_detailprice);
-			logger.log(LogStatus.PASS, "Assertion passed");
-			logger.attachScreenshot("E:\\Jino_testing\\Automation_project\\Guru99\\Screenshots\\screenshot.png");
+		//	logger.log(LogStatus.PASS, "Assertion passed");
+			//logger.attachScreenshot("E:\\Jino_testing\\Automation_project\\Guru99\\Screenshots\\screenshot.png");
 		} catch (Exception e) {
 			
 			e.printStackTrace();
@@ -180,7 +180,7 @@ By printorder = By.xpath("//a[contains(.,'Print Order')]");
 		}
 		System.out.println("Sony Xperia Listing and Productdetail price is correct");
 		
-		logger.endTest();
+		///logger.endTest();
 		
 	}
 		

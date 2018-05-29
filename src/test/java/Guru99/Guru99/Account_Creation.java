@@ -1,8 +1,7 @@
 package Guru99.Guru99;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.openqa.selenium.NoSuchElementException;
+
 import PageObject.Locators;
 import Utility.Browser;
 
@@ -10,13 +9,14 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 
+
 public class Account_Creation {
  
 	WebDriver driver;
 	
   @BeforeTest
   public void beforeTest() {
-	  driver = Browser.GetBrowser();
+	  driver= Browser.GetBrowser();
   }
 
   
