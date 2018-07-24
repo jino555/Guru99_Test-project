@@ -14,6 +14,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import com.relevantcodes.extentreports.ExtentReports;
+
 //import com.relevantcodes.extentreports.ExtentReports;
 
 //import com.relevantcodes.extentreports.LogStatus;
@@ -153,9 +155,9 @@ By printorder = By.xpath("//a[contains(.,'Print Order')]");
 	
 	public void Productlistingpage() {
 		
-		//ExtentReports logger = ExtentReports.get(Locators.class);
-		//logger.init("E:\\Jino_testing\\Automation_project\\Guru99\\Extent reports\\report.html", true);
-		//logger.startTest("VerifyProductListing");
+		ExtentReports logger = ExtentReports.get(Locators.class);
+		logger.init("E:\\Jino_testing\\Automation_project\\Guru99\\Extent reports\\report.html", true);
+		logger.startTest("VerifyProductListing");
 	
 		driver.findElement(mobile).click();
 		String Xperia_price= driver.findElement(xperiaprice).getText();
